@@ -1,0 +1,15 @@
+services:
+  llm:
+    build: .
+    tty: true
+    environment:
+      XDG_CACHE_HOME: /app/cache
+    ports:
+      - 80:8080
+    volumes:
+      - .:/app/src
+      - app-cache:/app/cache
+
+volumes:
+  app-cache:
+    driver: local
