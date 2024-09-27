@@ -1,8 +1,8 @@
 services:
   llm:
     build: .
-    tty: true
     environment:
+      # MODEL_NAME: '${MODEL_NAME:-}'
       XDG_CACHE_HOME: /app/cache
     ports:
       - 80:8080
